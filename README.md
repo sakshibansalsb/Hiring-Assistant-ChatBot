@@ -6,24 +6,25 @@
 - [Features](#features)
 - [Setup Instructions](#setup-instructions)
 - [Usage](#usage)
-- [Applications](#applications)
-- [Contributing](#contributing)
+- [Technical Details](#technical-details)
+- [Prompt Engineering](#prompt-engineering)
+- [Data Handling](#data-handling)
+- [Challenges & Solutions](#challenges--solutions)
 
 ## Project Overview
 
-The **TalentScout Hiring Assistant** is a Streamlit-based application designed to assist recruiters in conducting initial screenings for tech roles. The application leverages the **Gemini 1.5 Pro** language model to generate technical questions based on the candidate's expertise and collects candidate information for further evaluation. The tool is designed to streamline the hiring process by automating the initial screening phase, saving time for recruiters and providing a seamless experience for candidates.
+The **TalentScout Hiring Assistant** is an intelligent chatbot designed to assist recruiters in conducting initial screenings for tech roles. It leverages the **Gemini 1.5 Pro** language model to generate technical questions based on the candidate's declared tech stack and collects essential candidate information for further evaluation. The chatbot provides a seamless and interactive experience for candidates while streamlining the hiring process for recruiters.
 
 ## Features
 
 - **Candidate Information Collection**: Collects essential details such as name, email, phone number, years of experience, desired position, location, and tech stack.
 - **Dynamic Question Generation**: Generates 3 to 5 technical questions tailored to the candidate's tech stack using the Gemini 1.5 Pro model.
+- **User-Friendly Interface**: Built using Streamlit for a clean and intuitive user experience.
 - **Conversation Exit Handling**: Allows candidates to exit the conversation at any time by typing keywords like "exit," "quit," or "end."
-- **Responsive Feedback**: Provides immediate feedback on the candidate's responses and guides them through the process.
-- **Session Management**: Maintains session state to store candidate information and generated questions for a seamless user experience.
+- **Fallback Mechanism**: Provides meaningful responses when the chatbot does not understand the input.
+- **Session Management**: Maintains session state to store candidate information and generated questions.
 
 ## Setup Instructions
-
-To set up and run the **TalentScout Hiring Assistant** locally, follow these instructions:
 
 ### Prerequisites
 
@@ -35,7 +36,7 @@ To set up and run the **TalentScout Hiring Assistant** locally, follow these ins
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/sakshibansalsb/Hiring-Assistant-ChatBot
+    git clone https://github.com/sakshibansalsb/Hiring-Assistant-ChatBot.git
     cd talentscout-hiring-assistant
     ```
 
@@ -69,27 +70,41 @@ To set up and run the **TalentScout Hiring Assistant** locally, follow these ins
 ## Usage
 
 1. **Start the Application**: Run the application using the command `streamlit run app.py`.
-2. **Greeting and Introduction**: The application will greet the user and provide an overview of the process.
-3. **Collect Candidate Information**: Fill out the form with the candidate's details, including name, email, phone number, years of experience, desired position, location, and tech stack.
-4. **Generate Technical Questions**: Based on the provided tech stack, the application will generate 3 to 5 technical questions.
-5. **Answer Questions**: The candidate can answer the questions directly in the application.
-6. **Submit Responses**: Once the candidate submits their responses, the application will display the answers and end the conversation.
+2. **Greeting and Introduction**: The chatbot will greet you and explain its purpose.
+3. **Collect Candidate Information**: Fill out the form with your details, including name, email, phone number, years of experience, desired position, location, and tech stack.
+4. **Generate Technical Questions**: Based on your tech stack, the chatbot will generate 3 to 5 technical questions.
+5. **Answer Questions**: Provide your answers to the questions directly in the application.
+6. **Submit Responses**: Once you submit your responses, the chatbot will display your answers and end the conversation.
 
-## Applications
+## Technical Details
 
-- **Initial Screening**: Automates the initial screening process for tech roles, saving time for recruiters.
-- **Technical Assessment**: Provides tailored technical questions based on the candidate's expertise.
-- **Candidate Engagement**: Offers a seamless and interactive experience for candidates during the hiring process.
+- **Programming Language**: Python
+- **Libraries & Tools**:
+  - Streamlit: For the frontend interface.
+  - Google Generative AI (Gemini): For generating technical questions.
+  - Python-dotenv: For managing environment variables.
+- **Model Used**: Gemini 1.5 Pro
+- **Deployment**: Locally deployed using Streamlit. (Optional: Deployed on a cloud platform like AWS or GCP for bonus points.)
 
-## Contributing
+## Prompt Engineering
 
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+- **Information Gathering Prompts**: Designed to collect essential candidate details (e.g., "Please provide your full name, email address, and phone number.").
+- **Technical Question Generation Prompts**: Example: "Generate 3 to 5 technical interview questions for a candidate skilled in Python and Django. Focus on practical knowledge, real-world application, and coding concepts."
+- **Fallback Mechanism**: If the chatbot doesn’t understand the input, it responds with: "I'm sorry, I didn't quite understand that. Could you please rephrase your input or provide more details?"
 
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Commit your changes.
-4. Push your branch to your forked repository.
-5. Submit a pull request with a detailed description of your changes.
+## Data Handling
+
+- **Simulated Data**: All candidate information is stored temporarily in the session state and is not persisted after the session ends.
+- **Data Privacy**: No sensitive data is stored permanently. The application complies with data privacy best practices.
+
+## Challenges & Solutions
+
+- **Challenge 1**: Generating relevant technical questions for diverse tech stacks.
+  - **Solution**: Designed prompts to focus on practical and theoretical aspects of the specified technologies.
+- **Challenge 2**: Maintaining conversation context.
+  - **Solution**: Used Streamlit’s session state to store candidate information and generated questions.
+- **Challenge 3**: Handling unexpected user inputs.
+  - **Solution**: Implemented a fallback mechanism to guide users to rephrase their inputs.
 
 ---
 
