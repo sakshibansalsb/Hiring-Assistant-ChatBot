@@ -18,7 +18,7 @@ The **TalentScout Hiring Assistant** is an intelligent chatbot designed to assis
 
 ### Reference images  
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/932f8749-5c72-4a1e-a53d-7734b36b4ab1" alt="Form" width="500" height="450">
+  <img src="https://github.com/user-attachments/assets/932f8749-5c72-4a1e-a53d-7734b36b4ab1" alt="Form" width="300" height="450">
   <img src="https://github.com/user-attachments/assets/29edee10-d0a8-4fae-8421-81205c5e621f" alt="Form" width="500" height="450">
 </div>
 <div align="center">
