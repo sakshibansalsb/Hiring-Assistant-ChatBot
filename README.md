@@ -14,6 +14,11 @@
 ## Project Overview
 
 The **TalentScout Hiring Assistant** is an intelligent chatbot designed to assist recruiters in conducting initial screenings for tech roles. It leverages the **Gemini 1.5 Pro** language model to generate technical questions based on the candidate's declared tech stack and collects essential candidate information for further evaluation. The chatbot provides a seamless and interactive experience for candidates while streamlining the hiring process for recruiters.
+![Screenshot 2025-03-18 110624](https://github.com/user-attachments/assets/932f8749-5c72-4a1e-a53d-7734b36b4ab1)
+![Screenshot 2025-03-18 110652](https://github.com/user-attachments/assets/29edee10-d0a8-4fae-8421-81205c5e621f)
+![Screenshot 2025-03-18 110738](https://github.com/user-attachments/assets/299faa5d-dd53-4700-ae15-9d476fa308f0)
+![Screenshot 2025-03-18 110751](https://github.com/user-attachments/assets/8b8bd8c2-ea8a-4305-9f00-4afeabe751d8)
+
 
 ## Features
 
